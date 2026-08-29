@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0D0D0D">
+
+    <com.tomasthrawat.wificontroller.JoystickView
+        android:id="@+id/joystick"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="32dp" />
+
+    <Button
+        android:id="@+id/btnUp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:text="@string/dpad_up"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="24dp" />
+
+    <Button
+        android:id="@+id/btnDown"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:text="@string/dpad_down"
+        app:layout_constraintStart_toStartOf="@id/btnUp"
+        app:layout_constraintTop_toBottomOf="@id/btnUp"
+        android:layout_marginTop="72dp" />
+
+    <Button
+        android:id="@+id/btnLeft"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:text="@string/dpad_left"
+        app:layout_constraintEnd_toStartOf="@id/btnUp"
+        app:layout_constraintTop_toTopOf="@id/btnUp"
+        app:layout_constraintBottom_toBottomOf="@id/btnDown"
+        android:layout_marginEnd="8dp" />
+
+    <Button
+        android:id="@+id/btnRight"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:text="@string/dpad_right"
+        app:layout_constraintStart_toEndOf="@id/btnUp"
+        app:layout_constraintTop_toTopOf="@id/btnUp"
+        app:layout_constraintBottom_toBottomOf="@id/btnDown"
+        android:layout_marginStart="8dp" />
+
+    <Button
+        android:id="@+id/btnY"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:text="Y"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginEnd="96dp"
+        android:layout_marginTop="24dp" />
+
+    <Button
+        android:id="@+id/btnX"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:text="X"
+        app:layout_constraintEnd_toStartOf="@id/btnY"
+        app:layout_constraintTop_toTopOf="@id/btnY"
+        android:layout_marginEnd="8dp" />
+
+    <Button
+        android:id="@+id/btnB"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:text="B"
+        app:layout_constraintStart_toEndOf="@id/btnY"
+        app:layout_constraintTop_toTopOf="@id/btnY"
+        android:layout_marginStart="8dp" />
+
+    <Button
+        android:id="@+id/btnA"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:text="A"
+        app:layout_constraintStart_toStartOf="@id/btnX"
+        app:layout_constraintTop_toBottomOf="@id/btnX"
+        android:layout_marginTop="8dp" />
+
+    <Button
+        android:id="@+id/btnSelect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/select"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="80dp" />
+
+    <Button
+        android:id="@+id/btnStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/start"
+        app:layout_constraintStart_toEndOf="@id/btnSelect"
+        app:layout_constraintBottom_toBottomOf="@id/btnSelect"
+        android:layout_marginStart="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
