@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Controller</string>
+    <string name="wifi_connected">متصل بشبكة واي فاي</string>
+    <string name="wifi_not_connected">مش متصل بواي فاي</string>
+    <string name="wifi_required">لازم تكون متصل بشبكة واي فاي الأول</string>
+    <string name="wifi_lost">اتقطعت شبكة الواي فاي</string>
+    <string name="invalid_ip">اكتب IP صحيح</string>
+    <string name="invalid_port">اكتب port صحيح</string>
+    <string name="hint_ip">IP بتاع الجهاز</string>
+    <string name="hint_port">Port</string>
+    <string name="connect">اتصال</string>
+    <string name="select">Select</string>
+    <string name="start">Start</string>
+    <string name="dpad_up">↑</string>
+    <string name="dpad_down">↓</string>
+    <string name="dpad_left">←</string>
+    <string name="dpad_right">→</string>
+</resources>
