@@ -16,25 +16,25 @@
         android:layout_marginStart="32dp"
         android:layout_marginBottom="32dp" />
 
-    <!-- D-pad: built upward from a fixed gap above the joystick so it never touches it -->
-    <Button
-        android:id="@+id/btnDown"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:text="@string/dpad_down"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/joystick"
-        android:layout_marginStart="48dp"
-        android:layout_marginBottom="24dp" />
-
+    <!-- D-pad: Up pinned to the top, Down pinned above the joystick — each always visible on its own anchor -->
     <Button
         android:id="@+id/btnUp"
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:text="@string/dpad_up"
-        app:layout_constraintLeft_toLeftOf="@id/btnDown"
-        app:layout_constraintBottom_toTopOf="@id/btnDown"
-        android:layout_marginBottom="72dp" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="24dp" />
+
+    <Button
+        android:id="@+id/btnDown"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:text="@string/dpad_down"
+        app:layout_constraintLeft_toLeftOf="@id/btnUp"
+        app:layout_constraintBottom_toTopOf="@id/joystick"
+        android:layout_marginBottom="24dp" />
 
     <Button
         android:id="@+id/btnLeft"
