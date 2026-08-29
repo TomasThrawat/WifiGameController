@@ -55,45 +55,45 @@
         app:layout_constraintBottom_toBottomOf="@id/btnDown"
         android:layout_marginStart="8dp" />
 
-    <!-- A/B/X/Y: RIGHT side, plus/diamond shape centered on Y -->
+    <!-- A/B/X/Y: RIGHT side, plus shape: X top, A left, B right, Y bottom -->
     <Button
-        android:id="@+id/btnY"
+        android:id="@+id/btnX"
         android:layout_width="56dp"
         android:layout_height="56dp"
-        android:text="Y"
+        android:text="X"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginEnd="124dp"
         android:layout_marginTop="24dp" />
 
     <Button
-        android:id="@+id/btnX"
-        android:layout_width="56dp"
-        android:layout_height="56dp"
-        android:text="X"
-        app:layout_constraintLeft_toRightOf="@id/btnY"
-        app:layout_constraintTop_toTopOf="@id/btnY"
-        app:layout_constraintBottom_toBottomOf="@id/btnY"
-        android:layout_marginStart="16dp" />
-
-    <Button
         android:id="@+id/btnB"
         android:layout_width="56dp"
         android:layout_height="56dp"
         android:text="B"
-        app:layout_constraintRight_toLeftOf="@id/btnY"
-        app:layout_constraintTop_toTopOf="@id/btnY"
-        app:layout_constraintBottom_toBottomOf="@id/btnY"
-        android:layout_marginEnd="16dp" />
+        app:layout_constraintLeft_toRightOf="@id/btnX"
+        app:layout_constraintTop_toTopOf="@id/btnX"
+        app:layout_constraintBottom_toBottomOf="@id/btnX"
+        android:layout_marginStart="16dp" />
 
     <Button
         android:id="@+id/btnA"
         android:layout_width="56dp"
         android:layout_height="56dp"
         android:text="A"
-        app:layout_constraintLeft_toLeftOf="@id/btnY"
-        app:layout_constraintRight_toRightOf="@id/btnY"
-        app:layout_constraintTop_toBottomOf="@id/btnY"
+        app:layout_constraintRight_toLeftOf="@id/btnX"
+        app:layout_constraintTop_toTopOf="@id/btnX"
+        app:layout_constraintBottom_toBottomOf="@id/btnX"
+        android:layout_marginEnd="16dp" />
+
+    <Button
+        android:id="@+id/btnY"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:text="Y"
+        app:layout_constraintLeft_toLeftOf="@id/btnX"
+        app:layout_constraintRight_toRightOf="@id/btnX"
+        app:layout_constraintTop_toBottomOf="@id/btnX"
         android:layout_marginTop="16dp" />
 
     <!-- Start/Select: bottom center -->
