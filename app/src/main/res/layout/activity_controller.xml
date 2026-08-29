@@ -6,25 +6,35 @@
     android:layoutDirection="ltr"
     android:background="#0D0D0D">
 
-    <!-- D-pad: top-left -->
-    <Button
-        android:id="@+id/btnUp"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:text="@string/dpad_up"
+    <!-- Joystick: LEFT side, anchored to bottom -->
+    <com.tomasthrawat.wificontroller.JoystickView
+        android:id="@+id/joystick"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="24dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="32dp" />
 
+    <!-- D-pad: built upward from a fixed gap above the joystick so it never touches it -->
     <Button
         android:id="@+id/btnDown"
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:text="@string/dpad_down"
-        app:layout_constraintLeft_toLeftOf="@id/btnUp"
-        app:layout_constraintTop_toBottomOf="@id/btnUp"
-        android:layout_marginTop="72dp" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/joystick"
+        android:layout_marginStart="48dp"
+        android:layout_marginBottom="24dp" />
+
+    <Button
+        android:id="@+id/btnUp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:text="@string/dpad_up"
+        app:layout_constraintLeft_toLeftOf="@id/btnDown"
+        app:layout_constraintBottom_toTopOf="@id/btnDown"
+        android:layout_marginBottom="72dp" />
 
     <Button
         android:id="@+id/btnLeft"
@@ -46,16 +56,7 @@
         app:layout_constraintBottom_toBottomOf="@id/btnDown"
         android:layout_marginStart="8dp" />
 
-    <!-- Joystick: chained BELOW the D-pad with a fixed gap so it never overlaps it, regardless of screen height -->
-    <com.tomasthrawat.wificontroller.JoystickView
-        android:id="@+id/joystick"
-        android:layout_width="160dp"
-        android:layout_height="160dp"
-        app:layout_constraintLeft_toLeftOf="@id/btnLeft"
-        app:layout_constraintTop_toBottomOf="@id/btnDown"
-        android:layout_marginTop="32dp" />
-
-    <!-- A/B/X/Y: RIGHT side, true plus shape: X above, A..B row with a center gap, Y below -->
+    <!-- A/B/X/Y: RIGHT side, plus shape: X above, A..B row with a center gap, Y below -->
     <Button
         android:id="@+id/btnB"
         android:layout_width="56dp"
