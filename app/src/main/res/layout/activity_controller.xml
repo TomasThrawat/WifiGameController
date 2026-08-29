@@ -97,12 +97,12 @@
         app:layout_constraintTop_toBottomOf="@id/btnA"
         android:layout_marginTop="16dp" />
 
-    <!-- Start/Select: bottom center -->
+    <!-- Start/Select: bottom center, positions swapped -->
     <Button
-        android:id="@+id/btnSelect"
+        android:id="@+id/btnStart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/select"
+        android:text="@string/start"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -110,12 +110,12 @@
         android:layout_marginEnd="80dp" />
 
     <Button
-        android:id="@+id/btnStart"
+        android:id="@+id/btnSelect"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/start"
-        app:layout_constraintLeft_toRightOf="@id/btnSelect"
-        app:layout_constraintBottom_toBottomOf="@id/btnSelect"
+        android:text="@string/select"
+        app:layout_constraintLeft_toRightOf="@id/btnStart"
+        app:layout_constraintBottom_toBottomOf="@id/btnStart"
         android:layout_marginStart="16dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
