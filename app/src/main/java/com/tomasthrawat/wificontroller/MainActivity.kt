@@ -13,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
+import kotlinx.coroutines.currentCoroutineContext
 import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -87,7 +88,7 @@ class MainActivity : AppCompatActivity() {
         }
         try {
             val buf = ByteArray(512)
-            while (isActive) {
+            while (currentCoroutineContext().isActive) {
                 val packet = DatagramPacket(buf, buf.size)
                 socket.receive(packet)
                 val msg = String(packet.data, 0, packet.length, Charsets.UTF_8)
