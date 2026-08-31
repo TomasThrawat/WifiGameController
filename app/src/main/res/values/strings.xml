@@ -15,4 +15,6 @@
     <string name="dpad_down">↓</string>
     <string name="dpad_left">←</string>
     <string name="dpad_right">→</string>
+    <string name="discovered_devices_label">الأجهزة المكتشفة:</string>
+    <string name="manual_entry_label">أو أدخل يدويًا:</string>
 </resources>

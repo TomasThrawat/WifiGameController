@@ -3,7 +3,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center"
     android:padding="24dp"
     android:background="#0D0D0D">
 
@@ -13,7 +12,30 @@
         android:layout_height="wrap_content"
         android:textColor="#E0965A"
         android:textSize="16sp"
-        android:layout_marginBottom="24dp" />
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        android:text="@string/discovered_devices_label"
+        android:layout_marginBottom="4dp" />
+
+    <ListView
+        android:id="@+id/deviceListView"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:background="#1A1A1A"
+        android:layout_marginBottom="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#777777"
+        android:textSize="12sp"
+        android:text="@string/manual_entry_label"
+        android:layout_marginBottom="8dp" />
 
     <EditText
         android:id="@+id/ipInput"
